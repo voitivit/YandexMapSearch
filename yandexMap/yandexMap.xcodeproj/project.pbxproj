@@ -1,0 +1,513 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F486C56327E0E12D90236932 /* Pods_yandexMap.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6AB829EFAE87DC373DAF5B02 /* Pods_yandexMap.framework */; };
+		F7921775292554BC003711A5 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7921774292554BC003711A5 /* AppDelegate.swift */; };
+		F7921777292554BC003711A5 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7921776292554BC003711A5 /* SceneDelegate.swift */; };
+		F7921779292554BC003711A5 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7921778292554BC003711A5 /* ViewController.swift */; };
+		F792177C292554BC003711A5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F792177A292554BC003711A5 /* Main.storyboard */; };
+		F792177E292554BD003711A5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F792177D292554BD003711A5 /* Assets.xcassets */; };
+		F7921781292554BD003711A5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F792177F292554BD003711A5 /* LaunchScreen.storyboard */; };
+		F79217892927909E003711A5 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217882927909E003711A5 /* SearchViewController.swift */; };
+		F792178D2927BB38003711A5 /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792178C2927BB38003711A5 /* SearchDelegate.swift */; };
+		F79217912927C527003711A5 /* AddLocationPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217902927C527003711A5 /* AddLocationPresentationController.swift */; };
+		F79217932927C531003711A5 /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217922927C531003711A5 /* AddLocationController.swift */; };
+		F79217952927C5DC003711A5 /* AddLocationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79217942927C5DC003711A5 /* AddLocationController.xib */; };
+		F79217992927C677003711A5 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217982927C677003711A5 /* PresentationController.swift */; };
+		F792179B2927C688003711A5 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792179A2927C688003711A5 /* OverlayView.swift */; };
+		F792179D2927C693003711A5 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F792179C2927C693003711A5 /* OverlayView.xib */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		62C4963882D8962B4D6CA133 /* Pods-yandexMap.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yandexMap.debug.xcconfig"; path = "Target Support Files/Pods-yandexMap/Pods-yandexMap.debug.xcconfig"; sourceTree = "<group>"; };
+		6AB829EFAE87DC373DAF5B02 /* Pods_yandexMap.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_yandexMap.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		DA1D4D6310B7FA41280F2923 /* Pods-yandexMap.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-yandexMap.release.xcconfig"; path = "Target Support Files/Pods-yandexMap/Pods-yandexMap.release.xcconfig"; sourceTree = "<group>"; };
+		F7921771292554BC003711A5 /* yandexMap.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = yandexMap.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F7921774292554BC003711A5 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F7921776292554BC003711A5 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		F7921778292554BC003711A5 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F792177B292554BC003711A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F792177D292554BD003711A5 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F7921780292554BD003711A5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F7921782292554BD003711A5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F79217882927909E003711A5 /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		F792178C2927BB38003711A5 /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
+		F79217902927C527003711A5 /* AddLocationPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationPresentationController.swift; sourceTree = "<group>"; };
+		F79217922927C531003711A5 /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
+		F79217942927C5DC003711A5 /* AddLocationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationController.xib; sourceTree = "<group>"; };
+		F79217982927C677003711A5 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
+		F792179A2927C688003711A5 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		F792179C2927C693003711A5 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F792176E292554BC003711A5 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F486C56327E0E12D90236932 /* Pods_yandexMap.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		679189738AA1EBE5DC7F9A93 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				6AB829EFAE87DC373DAF5B02 /* Pods_yandexMap.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		A37A835830176ABB5E8EA206 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				62C4963882D8962B4D6CA133 /* Pods-yandexMap.debug.xcconfig */,
+				DA1D4D6310B7FA41280F2923 /* Pods-yandexMap.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		F7921768292554BC003711A5 = {
+			isa = PBXGroup;
+			children = (
+				F7921773292554BC003711A5 /* yandexMap */,
+				F7921772292554BC003711A5 /* Products */,
+				A37A835830176ABB5E8EA206 /* Pods */,
+				679189738AA1EBE5DC7F9A93 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		F7921772292554BC003711A5 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F7921771292554BC003711A5 /* yandexMap.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F7921773292554BC003711A5 /* yandexMap */ = {
+			isa = PBXGroup;
+			children = (
+				F7921774292554BC003711A5 /* AppDelegate.swift */,
+				F7921776292554BC003711A5 /* SceneDelegate.swift */,
+				F7981C452927CEEA007D9FA3 /* Начало, показ карт */,
+				F792178E2927BB3C003711A5 /* Protocol */,
+				F792178F2927C4D8003711A5 /* Controller */,
+				F79217962927C64A003711A5 /* View */,
+				F792177A292554BC003711A5 /* Main.storyboard */,
+				F792177D292554BD003711A5 /* Assets.xcassets */,
+				F792177F292554BD003711A5 /* LaunchScreen.storyboard */,
+				F7921782292554BD003711A5 /* Info.plist */,
+			);
+			path = yandexMap;
+			sourceTree = "<group>";
+		};
+		F792178E2927BB3C003711A5 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				F792178C2927BB38003711A5 /* SearchDelegate.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		F792178F2927C4D8003711A5 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				F79217882927909E003711A5 /* SearchViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		F79217962927C64A003711A5 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F79217972927C659003711A5 /* AddLocationView */,
+				F792179E2927C69D003711A5 /* CustomView */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		F79217972927C659003711A5 /* AddLocationView */ = {
+			isa = PBXGroup;
+			children = (
+				F79217902927C527003711A5 /* AddLocationPresentationController.swift */,
+				F79217922927C531003711A5 /* AddLocationController.swift */,
+				F79217942927C5DC003711A5 /* AddLocationController.xib */,
+			);
+			path = AddLocationView;
+			sourceTree = "<group>";
+		};
+		F792179E2927C69D003711A5 /* CustomView */ = {
+			isa = PBXGroup;
+			children = (
+				F79217982927C677003711A5 /* PresentationController.swift */,
+				F792179A2927C688003711A5 /* OverlayView.swift */,
+				F792179C2927C693003711A5 /* OverlayView.xib */,
+			);
+			path = CustomView;
+			sourceTree = "<group>";
+		};
+		F7981C452927CEEA007D9FA3 /* Начало, показ карт */ = {
+			isa = PBXGroup;
+			children = (
+				F7921778292554BC003711A5 /* ViewController.swift */,
+			);
+			path = "Начало, показ карт";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F7921770292554BC003711A5 /* yandexMap */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F7921785292554BD003711A5 /* Build configuration list for PBXNativeTarget "yandexMap" */;
+			buildPhases = (
+				5AB4CE3E71AA2BBB893D4F4F /* [CP] Check Pods Manifest.lock */,
+				F792176D292554BC003711A5 /* Sources */,
+				F792176E292554BC003711A5 /* Frameworks */,
+				F792176F292554BC003711A5 /* Resources */,
+				0ADB418E8D394B0B6C713769 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = yandexMap;
+			productName = yandexMap;
+			productReference = F7921771292554BC003711A5 /* yandexMap.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F7921769292554BC003711A5 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1410;
+				LastUpgradeCheck = 1410;
+				TargetAttributes = {
+					F7921770292554BC003711A5 = {
+						CreatedOnToolsVersion = 14.1;
+					};
+				};
+			};
+			buildConfigurationList = F792176C292554BC003711A5 /* Build configuration list for PBXProject "yandexMap" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F7921768292554BC003711A5;
+			productRefGroup = F7921772292554BC003711A5 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F7921770292554BC003711A5 /* yandexMap */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F792176F292554BC003711A5 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F79217952927C5DC003711A5 /* AddLocationController.xib in Resources */,
+				F7921781292554BD003711A5 /* LaunchScreen.storyboard in Resources */,
+				F792179D2927C693003711A5 /* OverlayView.xib in Resources */,
+				F792177E292554BD003711A5 /* Assets.xcassets in Resources */,
+				F792177C292554BC003711A5 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		0ADB418E8D394B0B6C713769 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yandexMap/Pods-yandexMap-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-yandexMap/Pods-yandexMap-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-yandexMap/Pods-yandexMap-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		5AB4CE3E71AA2BBB893D4F4F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-yandexMap-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F792176D292554BC003711A5 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F792179B2927C688003711A5 /* OverlayView.swift in Sources */,
+				F7921779292554BC003711A5 /* ViewController.swift in Sources */,
+				F79217932927C531003711A5 /* AddLocationController.swift in Sources */,
+				F7921775292554BC003711A5 /* AppDelegate.swift in Sources */,
+				F792178D2927BB38003711A5 /* SearchDelegate.swift in Sources */,
+				F79217892927909E003711A5 /* SearchViewController.swift in Sources */,
+				F79217912927C527003711A5 /* AddLocationPresentationController.swift in Sources */,
+				F7921777292554BC003711A5 /* SceneDelegate.swift in Sources */,
+				F79217992927C677003711A5 /* PresentationController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F792177A292554BC003711A5 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F792177B292554BC003711A5 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F792177F292554BD003711A5 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F7921780292554BD003711A5 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F7921783292554BD003711A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F7921784292554BD003711A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F7921786292554BD003711A5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 62C4963882D8962B4D6CA133 /* Pods-yandexMap.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NX4Z863YP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = yandexMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = voitivit.yandexMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F7921787292554BD003711A5 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = DA1D4D6310B7FA41280F2923 /* Pods-yandexMap.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = NX4Z863YP5;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = yandexMap/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = voitivit.yandexMap;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F792176C292554BC003711A5 /* Build configuration list for PBXProject "yandexMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7921783292554BD003711A5 /* Debug */,
+				F7921784292554BD003711A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F7921785292554BD003711A5 /* Build configuration list for PBXNativeTarget "yandexMap" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F7921786292554BD003711A5 /* Debug */,
+				F7921787292554BD003711A5 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F7921769292554BC003711A5 /* Project object */;
+}
