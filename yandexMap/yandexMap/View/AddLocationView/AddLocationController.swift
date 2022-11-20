@@ -71,7 +71,7 @@ class AddLocationController: UIViewController {
                 locations.append(infoTitle)
                 UserDefaults.standard.set(locations, forKey: "locations")
             }*/
-            print("СОХРАНИЛИ В ЛИЧНОМ КАБИНЕТЕ ПОЛЬЗОВАТЕЛЯ")
+            print("ПЕРЕДАЛИ ИНФОРМАЦИЮ НА СЕРВЕР")
             self.dismiss(animated: true, completion: nil)
         }
         alert.addAction(cancel)

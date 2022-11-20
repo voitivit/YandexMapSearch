@@ -17,7 +17,7 @@ class SearchViewController:  UIViewController {
     
     private lazy var searchBar: UISearchBar = {
         let searchBar = UISearchBar()
-        searchBar.placeholder = "Search..."
+        searchBar.placeholder = "Поиск..."
         searchBar.backgroundColor = .clear
         searchBar.searchTextField.backgroundColor = .white
         searchBar.delegate = self
@@ -25,8 +25,8 @@ class SearchViewController:  UIViewController {
     }()
     private lazy var locateButton: UIButton = {
         let button = UIButton(type: .system)
-        button.backgroundColor = .white
-        button.setImage(UIImage(named: "locateIcon")!, for: .normal)
+        button.backgroundColor = .clear
+        button.setImage(UIImage(named: "locateUser")!, for: .normal)
         button.layer.cornerRadius = 56 / 2
         button.translatesAutoresizingMaskIntoConstraints = false
         button.addTarget(self, action: #selector(locateButtonTapped), for: .touchUpInside)
@@ -58,28 +58,10 @@ class SearchViewController:  UIViewController {
     // MARK: - Functions
     private func configureMapkitForUserLocation() {
         searchBar.text = nil
-        mapView.mapWindow.map.isRotateGesturesEnabled = false
-        userLocationLayer.setVisibleWithOn(setVisibleOn)
-        setVisibleOn.toggle()
-        userLocationLayer.isHeadingEnabled = true
-        userLocationLayer.setObjectListenerWith(self)
-       // Передавать сюда координаты
-        // Сделать в сл раз!
-
-    
+        print("ПЕРЕДАТЬ КООРДИНАТЫ ПОЛЬЗОВАТЕЛЯ СЮДА!")
+        
     }
-   /* private func configureMapkitForUserLocation() {
-        // getting user location and moving map
-        searchBar.text = nil
-        mapView.mapWindow.map.isRotateGesturesEnabled = false
-        userLocationLayer.setVisibleWithOn(setVisibleOn)
-        setVisibleOn.toggle()
-        userLocationLayer.isHeadingEnabled = true
-        userLocationLayer.setAnchorWithAnchorNormal(
-            CGPoint(x: 0.5 * mapView.frame.size.width * scale, y: 0.5 * mapView.frame.size.height * scale),
-            anchorCourse: CGPoint(x: 0.5 * mapView.frame.size.width * scale, y: 0.83 * mapView.frame.size.height * scale))
-        userLocationLayer.setObjectListenerWith(self)
-    }*/
+   
     private func configureMapkitForSearching() {
         // configuring map for searchign
         searchManager = YMKSearch.sharedInstance().createSearchManager(with: .combined)
@@ -87,12 +69,13 @@ class SearchViewController:  UIViewController {
         mapView.mapWindow.map.addTapListener(with: self)
         mapView.mapWindow.map.addInputListener(with: self)
         mapView.mapWindow.map.move(with: YMKCameraPosition(
-            target: YMKPoint(latitude: 59.945933, longitude: 30.320045),
+            // Moscow data : 55.755864, 37.617698
+            target: YMKPoint(latitude: 55.755864, longitude: 37.617698),
             zoom: 14,
             azimuth: 0,
             tilt: 0))
     }
-    @objc private func locateButtonTapped() {
+     @objc private func locateButtonTapped() {
         configureMapkitForUserLocation()
     }
     @objc private func showAddLocationView(with info: String) {
@@ -160,11 +143,11 @@ extension SearchViewController: YMKMapCameraListener {
     func onSearchResponse(_ response: YMKSearchResponse) {}
     func onSearchError(_ error: Error) {
         let searchError = (error as NSError).userInfo[YRTUnderlyingErrorKey] as! YRTError
-        var errorMessage = "Unknown error"
+        var errorMessage = "Неизвестная ошибка"
         if searchError.isKind(of: YRTNetworkError.self) {
-            errorMessage = "Network error"
+            errorMessage = "Нет интернета"
         } else if searchError.isKind(of: YRTRemoteError.self) {
-            errorMessage = "Remote server error"
+            errorMessage = "Ошибка на сервере"
         }
         let alert = UIAlertController(title: "Error", message: errorMessage, preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
@@ -223,8 +206,6 @@ extension SearchViewController: YMKLayersGeoObjectTapListener, YMKMapInputListen
     
     func onMapTap(with map: YMKMap, point: YMKPoint) {
         mapView.mapWindow.map.deselectGeoObject()
-
- 
     }
     
     func onMapLongTap(with map: YMKMap, point: YMKPoint) {

@@ -12,7 +12,12 @@ class OverlayView: UIViewController {
     @IBOutlet weak var slideIdicator: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
-
+    //Создание tableView кодом:
+   /* let tableView: UITableView = {
+        let table = UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        return table
+    }()*/
     var delegate: SearchDelegate?
     // Анимация
     var hasSetPointOrigin = false
@@ -52,9 +57,9 @@ class OverlayView: UIViewController {
     // MARK: - Animation
     @objc func panGestureRecognizerAction(sender: UIPanGestureRecognizer) {
         let translation = sender.translation(in: view)
-        // Not allowing the user to drag the view upward
-        guard translation.y >= 0 else { return }
-        // setting x as 0 because we don't want users to move the frame side ways!! Only want straight up or down
+      //вью не уходит вверх search
+         guard translation.y >= 0 else { return }
+        // Если поставим х больше 0 , будет слетать вью
         view.frame.origin = CGPoint(x: 0, y: self.pointOrigin!.y + translation.y)
         
         if sender.state == .ended {
@@ -62,9 +67,9 @@ class OverlayView: UIViewController {
             if dragVelocity.y >= 1300 {
                 self.dismiss(animated: true, completion: nil)
             } else {
-                // Set back to original position of the view controller
-                UIView.animate(withDuration: 0.3) {
-                    self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 400)
+                // Быстро убираем контрллер, чем меньше значение от 1, тем медленне будет уходить search
+                    UIView.animate(withDuration: 1) {
+                    self.view.frame.origin = self.pointOrigin ?? CGPoint(x: 0, y: 100)
                 }
             }
         }
