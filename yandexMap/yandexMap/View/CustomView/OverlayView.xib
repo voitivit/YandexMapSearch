@@ -13,7 +13,6 @@
                 <outlet property="searchBar" destination="LOa-x1-Z11" id="iam-49-x9x"/>
                 <outlet property="slideIdicator" destination="5Fp-Rm-J4w" id="N9J-ls-l7i"/>
                 <outlet property="tableView" destination="1Vo-FR-3bQ" id="LBj-RL-PHa"/>
-                <outlet property="view" destination="1cd-1D-szc" id="uOe-Wn-7eE"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>

@@ -9,15 +9,35 @@ import UIKit
 import YandexMapsMobile
 class OverlayView: UIViewController {
     
-    @IBOutlet weak var slideIdicator: UIView!
+    /*@IBOutlet weak var slideIdicator: UIView!
     @IBOutlet weak var searchBar: UISearchBar!
-    @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var tableView: UITableView!*/
     //Создание tableView кодом:
    /* let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
         return table
     }()*/
+    let slideIdicator: UIView = {
+        let slide = UIView()
+        slide.translatesAutoresizingMaskIntoConstraints = true
+        return slide
+    }()
+    
+    //@IBOutlet weak var searchBar: UISearchBar!
+    let searchBar: UISearchBar = {
+        let search = UISearchBar()
+        search.translatesAutoresizingMaskIntoConstraints = true
+        return search
+    }()
+    
+    //@IBOutlet weak var tableView: UITableView!
+    let tableView: UITableView = {
+        let table = UITableView()
+        table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
+        table.translatesAutoresizingMaskIntoConstraints = true
+        return table
+    }()
     var delegate: SearchDelegate?
     // Анимация
     var hasSetPointOrigin = false
