@@ -12,7 +12,13 @@ import CoreLocation
 
 class SearchViewController:  UIViewController {
     
-    @IBOutlet weak var mapView: YMKMapView!
+    
+     let mapView: YMKMapView = {
+             let map = YMKMapView()
+             map.translatesAutoresizingMaskIntoConstraints = false
+             return map
+         }()
+     
     
     
     private lazy var searchBar: UISearchBar = {
@@ -44,6 +50,7 @@ class SearchViewController:  UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.addSubview(mapView)
         // setup searchBar
         navigationItem.titleView = searchBar
         // setup locateButton

@@ -21,7 +21,6 @@
 		F79217952927C5DC003711A5 /* AddLocationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79217942927C5DC003711A5 /* AddLocationController.xib */; };
 		F79217992927C677003711A5 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217982927C677003711A5 /* PresentationController.swift */; };
 		F792179B2927C688003711A5 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792179A2927C688003711A5 /* OverlayView.swift */; };
-		F792179D2927C693003711A5 /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = F792179C2927C693003711A5 /* OverlayView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,7 +42,6 @@
 		F79217942927C5DC003711A5 /* AddLocationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationController.xib; sourceTree = "<group>"; };
 		F79217982927C677003711A5 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		F792179A2927C688003711A5 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
-		F792179C2927C693003711A5 /* OverlayView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -150,7 +148,6 @@
 			children = (
 				F79217982927C677003711A5 /* PresentationController.swift */,
 				F792179A2927C688003711A5 /* OverlayView.swift */,
-				F792179C2927C693003711A5 /* OverlayView.xib */,
 			);
 			path = CustomView;
 			sourceTree = "<group>";
@@ -225,7 +222,6 @@
 			files = (
 				F79217952927C5DC003711A5 /* AddLocationController.xib in Resources */,
 				F7921781292554BD003711A5 /* LaunchScreen.storyboard in Resources */,
-				F792179D2927C693003711A5 /* OverlayView.xib in Resources */,
 				F792177E292554BD003711A5 /* Assets.xcassets in Resources */,
 				F792177C292554BC003711A5 /* Main.storyboard in Resources */,
 			);
