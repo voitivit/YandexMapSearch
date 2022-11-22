@@ -20,14 +20,14 @@ class OverlayView: UIViewController {
     }()*/
     let slideIdicator: UIView = {
         let slide = UIView()
-        slide.translatesAutoresizingMaskIntoConstraints = true
+        slide.translatesAutoresizingMaskIntoConstraints = false
         return slide
     }()
     
     //@IBOutlet weak var searchBar: UISearchBar!
     let searchBar: UISearchBar = {
         let search = UISearchBar()
-        search.translatesAutoresizingMaskIntoConstraints = true
+        search.translatesAutoresizingMaskIntoConstraints = false
         return search
     }()
     
@@ -35,7 +35,7 @@ class OverlayView: UIViewController {
     let tableView: UITableView = {
         let table = UITableView()
         table.register(UITableViewCell.self, forCellReuseIdentifier: "cell")
-        table.translatesAutoresizingMaskIntoConstraints = true
+        table.translatesAutoresizingMaskIntoConstraints = false
         return table
     }()
     var delegate: SearchDelegate?
@@ -56,6 +56,10 @@ class OverlayView: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Animation
+        view.addSubview(slideIdicator)
+        view.addSubview(searchBar)
+        view.addSubview(tableView)
+        setConstraints()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
         slideIdicator.roundCorners(.allCorners, radius: 10)
@@ -94,6 +98,41 @@ class OverlayView: UIViewController {
             }
         }
     }
+    func setupViews() { //настройка объектов
+        //view.addSubview(scrollView)
+        //scrollView.translatesAutoresizingMaskIntoConstraints = false
+       //scrollView.showsVerticalScrollIndicator = false
+        
+        view.addSubview(slideIdicator) // добавление на основной экран объекта
+        view.addSubview(searchBar)
+        view.addSubview(tableView)
+    }
+    
+    func setConstraints() {
+        NSLayoutConstraint.activate([
+            slideIdicator.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+            slideIdicator.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 177),
+            slideIdicator.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 177),
+            slideIdicator.bottomAnchor.constraint(equalTo: searchBar.topAnchor, constant: 10),
+            slideIdicator.heightAnchor.constraint(equalToConstant: 4),
+            slideIdicator.widthAnchor.constraint(equalToConstant: 60),
+            
+            searchBar.topAnchor.constraint(equalTo: slideIdicator.bottomAnchor, constant: 10),
+            searchBar.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 20),
+            searchBar.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 20),
+            searchBar.bottomAnchor.constraint(equalTo: tableView.topAnchor, constant: 10),
+            searchBar.heightAnchor.constraint(equalToConstant: 56),
+            searchBar.widthAnchor.constraint(equalToConstant: 374),
+            
+            tableView.topAnchor.constraint(equalTo: searchBar.bottomAnchor, constant: 10),
+            tableView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 32),
+            tableView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 32),
+            tableView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 32),
+            tableView.heightAnchor.constraint(equalToConstant: 582),
+            tableView.widthAnchor.constraint(equalToConstant: 350),
+        ])
+    }
+
 }
 // MARK: - Mapkit
 extension OverlayView {

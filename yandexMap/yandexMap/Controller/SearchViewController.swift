@@ -16,7 +16,7 @@ class SearchViewController:  UIViewController {
      let mapView: YMKMapView = {
              let map = YMKMapView()
              map.translatesAutoresizingMaskIntoConstraints = false
-             return map
+         return map
          }()
      
     
@@ -54,11 +54,11 @@ class SearchViewController:  UIViewController {
         // setup searchBar
         navigationItem.titleView = searchBar
         // setup locateButton
-        tabBarController!.view.addSubview(locateButton)
+        view.addSubview(locateButton)
         locateButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
         locateButton.widthAnchor.constraint(equalToConstant: 56).isActive = true
-        locateButton.bottomAnchor.constraint(equalTo: tabBarController!.view.safeAreaLayoutGuide.bottomAnchor, constant: -90).isActive = true
-        locateButton.rightAnchor.constraint(equalTo: tabBarController!.view.rightAnchor, constant: -16).isActive = true
+        locateButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -90).isActive = true
+        locateButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
         // configureMapkit
         configureMapkitForSearching()
     }
