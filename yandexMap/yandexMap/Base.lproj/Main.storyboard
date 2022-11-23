@@ -107,39 +107,6 @@
             </objects>
             <point key="canvasLocation" x="5197.7099236641216" y="-232.3943661971831"/>
         </scene>
-        <!--Tab Bar Controller-->
-        <scene sceneID="emL-07-Sij">
-            <objects>
-                <tabBarController id="0on-uk-EOx" sceneMemberID="viewController">
-                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="9Xf-sJ-7zT">
-                        <rect key="frame" x="0.0" y="0.0" width="393" height="49"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                    </tabBar>
-                    <connections>
-                        <segue destination="qAI-il-1sd" kind="relationship" relationship="viewControllers" id="DeW-AZ-Qi8"/>
-                    </connections>
-                </tabBarController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="1af-9M-tw6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="2347" y="-231"/>
-        </scene>
-        <!--Item 2-->
-        <scene sceneID="0ZT-Zh-KtP">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="qAI-il-1sd" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item 2" id="nAM-On-lmQ"/>
-                    <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="593-Hc-bOt">
-                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
-                        <autoresizingMask key="autoresizingMask"/>
-                    </navigationBar>
-                    <nil name="viewControllers"/>
-                </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="jdc-mv-b8z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="3345.801526717557" y="-232.3943661971831"/>
-        </scene>
         <!--Navigation Controller-->
         <scene sceneID="bh6-ly-2gD">
             <objects>

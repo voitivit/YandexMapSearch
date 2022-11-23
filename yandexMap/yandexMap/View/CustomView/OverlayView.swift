@@ -55,10 +55,11 @@ class OverlayView: UIViewController {
     //MARK: ВьюДиды
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Animation
+   
         view.addSubview(slideIdicator)
         view.addSubview(searchBar)
         view.addSubview(tableView)
+        // Animation
         setConstraints()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
