@@ -18,7 +18,6 @@
 		F792178D2927BB38003711A5 /* SearchDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792178C2927BB38003711A5 /* SearchDelegate.swift */; };
 		F79217912927C527003711A5 /* AddLocationPresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217902927C527003711A5 /* AddLocationPresentationController.swift */; };
 		F79217932927C531003711A5 /* AddLocationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217922927C531003711A5 /* AddLocationController.swift */; };
-		F79217952927C5DC003711A5 /* AddLocationController.xib in Resources */ = {isa = PBXBuildFile; fileRef = F79217942927C5DC003711A5 /* AddLocationController.xib */; };
 		F79217992927C677003711A5 /* PresentationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79217982927C677003711A5 /* PresentationController.swift */; };
 		F792179B2927C688003711A5 /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = F792179A2927C688003711A5 /* OverlayView.swift */; };
 /* End PBXBuildFile section */
@@ -39,7 +38,6 @@
 		F792178C2927BB38003711A5 /* SearchDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchDelegate.swift; sourceTree = "<group>"; };
 		F79217902927C527003711A5 /* AddLocationPresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationPresentationController.swift; sourceTree = "<group>"; };
 		F79217922927C531003711A5 /* AddLocationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddLocationController.swift; sourceTree = "<group>"; };
-		F79217942927C5DC003711A5 /* AddLocationController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AddLocationController.xib; sourceTree = "<group>"; };
 		F79217982927C677003711A5 /* PresentationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresentationController.swift; sourceTree = "<group>"; };
 		F792179A2927C688003711A5 /* OverlayView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -138,7 +136,6 @@
 			children = (
 				F79217902927C527003711A5 /* AddLocationPresentationController.swift */,
 				F79217922927C531003711A5 /* AddLocationController.swift */,
-				F79217942927C5DC003711A5 /* AddLocationController.xib */,
 			);
 			path = AddLocationView;
 			sourceTree = "<group>";
@@ -220,7 +217,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				F79217952927C5DC003711A5 /* AddLocationController.xib in Resources */,
 				F7921781292554BD003711A5 /* LaunchScreen.storyboard in Resources */,
 				F792177E292554BD003711A5 /* Assets.xcassets in Resources */,
 				F792177C292554BC003711A5 /* Main.storyboard in Resources */,

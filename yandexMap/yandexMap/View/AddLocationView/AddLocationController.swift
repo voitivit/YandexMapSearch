@@ -8,7 +8,7 @@
 import UIKit
 class AddLocationController: UIViewController {
     
-    @IBOutlet weak var slideIdicator: UIView!
+   /* @IBOutlet weak var slideIdicator: UIView!
     @IBOutlet weak var infoLabel: UILabel! {
         didSet {
             infoLabel.textAlignment = .center
@@ -21,8 +21,33 @@ class AddLocationController: UIViewController {
             addLocationButton.backgroundColor = .gray
             addLocationButton.setTitle("Сохранить", for: .normal)
         }
-    }
+    }*/
     
+    let slideIdicator: UIView = {
+                let slide = UIView()
+                slide.translatesAutoresizingMaskIntoConstraints = false
+                return slide
+            }()
+        
+       
+        
+        let infoLabel: UILabel = {
+                let label = UILabel()
+                label.translatesAutoresizingMaskIntoConstraints = false
+                label.textAlignment = .center
+                return label
+            }()
+        
+
+        let addLocationButton: UIButton = {
+                let button = UIButton()
+            button.translatesAutoresizingMaskIntoConstraints = false
+            button.title(for: .normal)
+            button.titleColor(for: .normal)
+            button.backgroundColor = .gray
+            button.setTitle("Сохранить", for: .normal)
+                return button
+            }()
     // MARK: - Properties
     // Для хранения адресов, сделать массивом если захотим передать в личный кабинет пользовтаеля
     var infoTitle: String?
@@ -31,6 +56,11 @@ class AddLocationController: UIViewController {
     var pointOrigin: CGPoint?
     override func viewDidLoad() {
         super.viewDidLoad()
+        view.backgroundColor = .white
+        view.addSubview(slideIdicator)
+        view.addSubview(infoLabel)
+        view.addSubview(addLocationButton)
+        setConstraints()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
         
@@ -78,6 +108,30 @@ class AddLocationController: UIViewController {
         alert.addAction(action)
         present(alert, animated: true)
     }
+    func setConstraints() {
+          NSLayoutConstraint.activate([
+              slideIdicator.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+              slideIdicator.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 177),
+              slideIdicator.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 177),
+              slideIdicator.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 49),
+              slideIdicator.heightAnchor.constraint(equalToConstant: 4),
+              slideIdicator.widthAnchor.constraint(equalToConstant: 60),
+              
+              infoLabel.topAnchor.constraint(equalTo: slideIdicator.bottomAnchor, constant: 10),
+              infoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
+              infoLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10),
+              infoLabel.bottomAnchor.constraint(equalTo: addLocationButton.topAnchor, constant: 10),
+              infoLabel.heightAnchor.constraint(equalToConstant: 52),
+              infoLabel.widthAnchor.constraint(equalToConstant: 394),
+              
+              addLocationButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 10),
+              addLocationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 170),
+              addLocationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 198),
+              addLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 20),
+              addLocationButton.heightAnchor.constraint(equalToConstant: 40),
+              addLocationButton.widthAnchor.constraint(equalToConstant: 46),
+          ])
+      }
     
 }
 extension AddLocationController {
