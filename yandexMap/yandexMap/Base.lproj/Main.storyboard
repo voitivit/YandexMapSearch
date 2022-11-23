@@ -46,10 +46,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jL4-VP-mm9" customClass="YMKMapView">
-                                <rect key="frame" x="0.0" y="115" width="393" height="703"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
                             <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="2ug-gE-U3s">
                                 <rect key="frame" x="0.0" y="59" width="393" height="56"/>
                                 <textInputTraits key="textInputTraits"/>
@@ -61,17 +57,12 @@
                         <viewLayoutGuide key="safeArea" id="JCO-I2-nm7"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="JCO-I2-nm7" firstAttribute="trailing" secondItem="jL4-VP-mm9" secondAttribute="trailing" id="0F5-DX-uao"/>
-                            <constraint firstItem="jL4-VP-mm9" firstAttribute="bottom" secondItem="JCO-I2-nm7" secondAttribute="bottom" id="HKM-Gb-Wc2"/>
-                            <constraint firstItem="jL4-VP-mm9" firstAttribute="leading" secondItem="JCO-I2-nm7" secondAttribute="leading" id="Qwc-Ov-oGb"/>
                             <constraint firstItem="2ug-gE-U3s" firstAttribute="trailing" secondItem="JCO-I2-nm7" secondAttribute="trailing" id="Wcw-hj-NWy"/>
                             <constraint firstItem="2ug-gE-U3s" firstAttribute="top" secondItem="JCO-I2-nm7" secondAttribute="top" id="dNK-af-l07"/>
                             <constraint firstItem="2ug-gE-U3s" firstAttribute="leading" secondItem="JCO-I2-nm7" secondAttribute="leading" id="giW-Xm-Pzu"/>
-                            <constraint firstItem="jL4-VP-mm9" firstAttribute="top" secondItem="2ug-gE-U3s" secondAttribute="bottom" id="t8a-EQ-oDM"/>
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="jL4-VP-mm9" id="75S-9R-25f"/>
                         <outlet property="searchBar" destination="2ug-gE-U3s" id="9UU-oN-3Oa"/>
                     </connections>
                 </viewController>
@@ -86,20 +77,8 @@
                     <view key="view" contentMode="scaleToFill" id="7we-Ny-PiS">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <subviews>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qO9-du-dJO" customClass="YMKMapView">
-                                <rect key="frame" x="0.0" y="103" width="393" height="749"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </view>
-                        </subviews>
                         <viewLayoutGuide key="safeArea" id="j8r-eB-d5d"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <constraints>
-                            <constraint firstItem="j8r-eB-d5d" firstAttribute="trailing" secondItem="qO9-du-dJO" secondAttribute="trailing" id="1cd-aG-ybq"/>
-                            <constraint firstAttribute="bottom" secondItem="qO9-du-dJO" secondAttribute="bottom" id="Krq-Dy-aXD"/>
-                            <constraint firstItem="qO9-du-dJO" firstAttribute="top" secondItem="j8r-eB-d5d" secondAttribute="top" id="YZK-kH-6Qr"/>
-                            <constraint firstItem="qO9-du-dJO" firstAttribute="leading" secondItem="j8r-eB-d5d" secondAttribute="leading" id="lDv-SQ-JGg"/>
-                        </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Gbp-38-P4z"/>
                 </viewController>

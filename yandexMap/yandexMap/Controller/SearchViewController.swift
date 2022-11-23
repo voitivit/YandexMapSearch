@@ -13,7 +13,7 @@ import CoreLocation
 class SearchViewController:  UIViewController {
     
     
-     let mapView: YMKMapView = {
+let mapView: YMKMapView = {
              let map = YMKMapView()
              map.translatesAutoresizingMaskIntoConstraints = false
          return map
@@ -53,6 +53,10 @@ class SearchViewController:  UIViewController {
         view.addSubview(mapView)
         // setup searchBar
         navigationItem.titleView = searchBar
+        mapView.topAnchor.constraint(equalTo: view.topAnchor, constant: 0).isActive = true
+        mapView.leftAnchor.constraint(equalTo: view.leftAnchor, constant: 0).isActive = true
+        mapView.rightAnchor.constraint(equalTo: view.rightAnchor, constant: 0).isActive = true
+        mapView.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 0).isActive = true
         // setup locateButton
         view.addSubview(locateButton)
         locateButton.heightAnchor.constraint(equalToConstant: 56).isActive = true
