@@ -7,24 +7,10 @@
 
 import UIKit
 class AddLocationController: UIViewController {
-    
-   /* @IBOutlet weak var slideIdicator: UIView!
-    @IBOutlet weak var infoLabel: UILabel! {
-        didSet {
-            infoLabel.textAlignment = .center
-        }
-    }
-    @IBOutlet weak var addLocationButton: UIButton! {
-        didSet {
-            addLocationButton.title(for: .normal)
-            addLocationButton.titleColor(for: .normal)
-            addLocationButton.backgroundColor = .gray
-            addLocationButton.setTitle("Сохранить", for: .normal)
-        }
-    }*/
-    
+
     let slideIdicator: UIView = {
                 let slide = UIView()
+        slide.backgroundColor = .black
                 slide.translatesAutoresizingMaskIntoConstraints = false
                 return slide
             }()
@@ -33,19 +19,20 @@ class AddLocationController: UIViewController {
         
         let infoLabel: UILabel = {
                 let label = UILabel()
-                label.translatesAutoresizingMaskIntoConstraints = false
+               
                 label.textAlignment = .center
+            label.translatesAutoresizingMaskIntoConstraints = false
                 return label
             }()
         
 
         let addLocationButton: UIButton = {
                 let button = UIButton()
-            button.translatesAutoresizingMaskIntoConstraints = false
             button.title(for: .normal)
             button.titleColor(for: .normal)
             button.backgroundColor = .gray
             button.setTitle("Сохранить", for: .normal)
+            button.translatesAutoresizingMaskIntoConstraints = false
                 return button
             }()
     // MARK: - Properties
@@ -110,26 +97,26 @@ class AddLocationController: UIViewController {
     }
     func setConstraints() {
           NSLayoutConstraint.activate([
-              slideIdicator.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 16),
+              slideIdicator.topAnchor.constraint(equalTo: view.topAnchor, constant: 50),
               slideIdicator.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 177),
               slideIdicator.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 177),
-              slideIdicator.bottomAnchor.constraint(equalTo: view.bottomAnchor, constant: 49),
+              slideIdicator.bottomAnchor.constraint(equalTo: infoLabel.topAnchor, constant: 5),
               slideIdicator.heightAnchor.constraint(equalToConstant: 4),
               slideIdicator.widthAnchor.constraint(equalToConstant: 60),
               
-              infoLabel.topAnchor.constraint(equalTo: slideIdicator.bottomAnchor, constant: 10),
+            //  infoLabel.topAnchor.constraint(equalTo: slideIdicator.topAnchor, constant: 0),
               infoLabel.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 10),
               infoLabel.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 10),
               infoLabel.bottomAnchor.constraint(equalTo: addLocationButton.topAnchor, constant: 10),
-              infoLabel.heightAnchor.constraint(equalToConstant: 52),
-              infoLabel.widthAnchor.constraint(equalToConstant: 394),
+             // infoLabel.heightAnchor.constraint(equalToConstant: 52),
+              //infoLabel.widthAnchor.constraint(equalToConstant: 394),
               
-              addLocationButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 10),
+             // addLocationButton.topAnchor.constraint(equalTo: infoLabel.bottomAnchor, constant: 10),
               addLocationButton.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 170),
               addLocationButton.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: 198),
               addLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: 20),
-              addLocationButton.heightAnchor.constraint(equalToConstant: 40),
-              addLocationButton.widthAnchor.constraint(equalToConstant: 46),
+              //addLocationButton.heightAnchor.constraint(equalToConstant: 40),
+              //addLocationButton.widthAnchor.constraint(equalToConstant: 46),
           ])
       }
     
