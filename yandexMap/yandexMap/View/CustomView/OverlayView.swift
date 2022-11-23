@@ -55,7 +55,6 @@ class OverlayView: UIViewController {
     //MARK: ВьюДиды
     override func viewDidLoad() {
         super.viewDidLoad()
-   
         view.addSubview(slideIdicator)
         view.addSubview(searchBar)
         view.addSubview(tableView)
