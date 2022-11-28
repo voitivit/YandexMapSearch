@@ -64,8 +64,13 @@ let mapView: YMKMapView = {
         locateButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -90).isActive = true
         locateButton.rightAnchor.constraint(equalTo: view.rightAnchor, constant: -16).isActive = true
         // configureMapkit
+       
         configureMapkitForSearching()
     }
+  
+    
+    
+    
     // MARK: - Functions
     private func configureMapkitForUserLocation() {
         searchBar.text = nil
@@ -186,7 +191,7 @@ extension SearchViewController: SearchDelegate {
                         zoom: 14,
                         azimuth: 0,
                         tilt: 0),
-                                               animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 2))
+                                               animationType: YMKAnimation(type: YMKAnimationType.smooth, duration: 0.1))
                     let placemark = mapObjects.addPlacemark(with: point)
                     placemark.setIconWith(UIImage(named: "locationIndicator")!)
                 }

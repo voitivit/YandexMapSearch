@@ -47,19 +47,34 @@ class AddLocationController: UIViewController {
         setConstraints()
         let panGesture = UIPanGestureRecognizer(target: self, action: #selector(panGestureRecognizerAction))
         view.addGestureRecognizer(panGesture)
-        
+        //choiseSearch()
         slideIdicator.roundCorners(.allCorners, radius: 10)
         addLocationButton.roundCorners(.allCorners, radius: 10)
         
-        if let locations = UserDefaults.standard.array(forKey: "locations") as? [String] {
+       /* if let locations = UserDefaults.standard.array(forKey: "locations") as? [String] {
             for location in locations {
                 if infoTitle! == location {
                     addLocationButton.setTitle("Already added", for: .normal)
                     addLocationButton.isUserInteractionEnabled = false
                 }
             }
+        }*/
+        
+          infoLabel.text = infoTitle
+        choiseSearch()
+    }
+    
+    
+    func choiseSearch() {
+        if infoLabel.text == "Россия, Москва" {
+            let alert = UIAlertController(title: "Есть такой горд", message: "есть такой город", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .cancel))
+           present(alert, animated: true,completion: nil)
+        } else {
+            let alert = UIAlertController(title: "нет", message: "есть такой город", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "ok", style: .cancel))
+            present(alert, animated: true,completion: nil)
         }
-        infoLabel.text = infoTitle
     }
     init(infoTitle: String) {
         super.init(nibName: nil, bundle: nil)
